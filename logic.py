@@ -70,7 +70,7 @@ class Logic_Class:
     def mod_27(self, array:list):
         """Este método se usa para aplicar un mod27 a cada valor dentro de un array
         Args:
-            key (list): Matriz con numeros base 10 sin modificaciones
+            array (list): Matriz con numeros base 10 sin modificaciones
         Returns:
             array (list): Matriz con cada valor modificado con su residuo del mod27
         """
@@ -195,8 +195,9 @@ class Logic_Class:
     def encrypt(self, phrase:str, key:list):
         """Este método se usa para encriptar un string mediante el Cifrado de Hill
         Args:
-            phrase (str): Frase que se quiere encriptar
+            phrase (str): Frase que se quiere encriptar e.g 'MATE MUSCULOS'
             key (list): Matriz de orden 3 con la clave para la encripción
+            e.g [[35,53,12],[12,21,5],[2,4,1]]
         """
         try:
             # PASAR EL STRING A MAYÚSULA Y SE CAMBIAN LOS ESPACIOS POR GUIONES BAJO

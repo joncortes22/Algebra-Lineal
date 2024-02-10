@@ -9,6 +9,7 @@ class Logic_Class:
 
         self.encrypt("MaTE MuSCUlOS", [[35,53,12],[12,21,5],[2,4,1]])
 
+    # BASE METHOD
     def method(self):
         try:
             pass

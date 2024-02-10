@@ -216,18 +216,25 @@ class Logic_Class:
             # PASAR CADA CHAR DE UNA LISTA A SU EQUIVALENTE EN EL ALFABETO
             phrase_array = self.char_to_value(alphabet, phrase_array)
 
-            # TRANSPORTAR UNA MATRIZ
+            # TRANSPORTAR LA MATRIZ
             phrase_array = self.transpose_array(phrase_array)
 
+            # MULTIPLICAR RAIZ DE VALORES CON LA CLAVE GENERADA
             phrase_array = self.multiply_arrays(key, phrase_array)
 
+            # TRANSPORTAR LA MATRIZ NUEVAMENTE
             phrase_array = self.transpose_array(phrase_array)
 
+            # APLICAR MOD27 PARA GENERAR VALORES NUMÉRICOS ENCRIPTADOS
             phrase_array = self.mod_27(phrase_array)
 
+            # PASAR VALORES NÚMERICOS ENCRIPTADOS A LETRAS
             phrase_array = self.value_to_char(alphabet, phrase_array)
 
+            # PASAR LAS LETRAS ENCRIPTADAS DENTRO DEL ARRAY A UN SOLO STRING
             encrypted_string = self.array_to_string(phrase_array)
+
+            # STRING ENCRIPTADO, LAST UPDATE 2-10
             print(encrypted_string)
 
         except Exception as method_error:
